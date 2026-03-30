@@ -1,0 +1,23 @@
+¿Qué es una estructura de datos?
+
+Un manera que organizar los datos para
+usarlos de manera efectiva para realizar
+operaciones (insertion, eliminar, actualizar, buscar)
+rápidamente
+
+¿Como almacenan datos las PC? 
+Bits, Bytes, disco duro, etc cosa que se
+almacén de manera específica 
+
+Tipos de estructuras de datos 
+Esticas: no se cambian en la ejecución del
+programa como las Matrices y Arrays
+
+Dinámica lineal: los dts pueden cambiar en
+la ejecución del programa como LinkedIn
+list, Stacks, Queues(FIFO)Importantes los
+Nodos de las listas 
+
+Dinámica no lineal: no se organizan de
+manera secuencial necesariamente como
+Grafos, Árboles, Tablas Hash. 
