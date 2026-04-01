@@ -1,0 +1,19 @@
+Resumen: Estructuras de datos estáticas
+Se identifican porque su tamaño se define en el momento de su creación y no puede cambiar
+durante la ejecución del programa 
+
+Operaciones en estructuras de datos estáticas
+
+Inserción: Es imposible debido a el límite de tamaño, Pero se puede simular la inserción
+desplazando elementos a la derecha y ubicando el nuevo valor en la posición deseada solo
+cuando el arreglo tenga un espacio disponible.
+
+Actualización: Esta si es posible, solamente se accede al índice deseado y se cambia el valor
+
+Eliminación: También es imposible, pero es posible simularla desplazando los elementos a la
+izquierda para cubrir el espacio del elemento eliminado. Esto no cambia el tamaño del arreglo
+base
+
+Recorrido: Se accede a cada uno de los elementos usando un buble generalmente
+
+Copia: Es crear un nuevo arreglo con los mismos elementos que el arreglo base
