@@ -1,0 +1,88 @@
+package estructurasdts.s2;
+import java.util.Scanner;
+public class ArregloInsertar {
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Ingrese el tamaño del arreglo: ");
+            int tamaño = sc.nextInt();
+            int[] arreglo = new int[tamaño];
+            for (int i = 0; i < arreglo.length; i++) {
+                arreglo[i] = 0;
+            }
+            int opcion;
+            do {
+                System.out.println("\nMENU");
+                System.out.println("1. Insertar número");
+                System.out.println("2. Mostrar arreglo");
+                System.out.println("3. Actualizar número");
+                System.out.println("4. Salir");
+                System.out.print("Seleccione una opción: ");
+                
+                opcion = sc.nextInt();
+                
+                switch (opcion) {
+                    
+                    case 1 -> {
+                        
+                        System.out.print("Ingrese la posición donde desea insertar: ");
+                        int pos = sc.nextInt();
+                        
+                        if (pos >= 0 && pos < arreglo.length) {
+                            
+                            if (arreglo[pos] == 0) {
+                                
+                                System.out.print("Ingrese el número: ");
+                                arreglo[pos] = sc.nextInt();
+                                
+                                System.out.println("Número insertado correctamente.");
+                                
+                            } else {
+                                System.out.println("Posición llena.");
+                            }
+                            
+                        } else {
+                            System.out.println("Posición inválida.");
+                        }
+                    }
+                    
+                    case 2 -> {
+                        
+                        System.out.println("\nContenido del arreglo:");
+                        
+                        for (int i = 0; i < arreglo.length; i++) {
+                            System.out.print("[" + arreglo[i] + "] ");
+                        }
+                        
+                        System.out.println();
+                    }
+                    case 3 -> {
+                        System.out.print("Ingrese la posición que desea actualizar: ");
+                        int pos = sc.nextInt();
+                        
+                        if (pos >= 0 && pos < arreglo.length) {
+                            
+                            if (arreglo[pos] != 0) {
+                                
+                                System.out.print("Ingrese el nuevo valor: ");
+                                arreglo[pos] = sc.nextInt();
+                                
+                                System.out.println("Elemento actualizado correctamente.");
+                                
+                            } else {
+                                System.out.println("La posición está vacía, primero debe insertar.");
+                            }
+                            
+                        } else {
+                            System.out.println("Posición inválida.");
+                        }
+                    }
+                    
+                    case 4 -> System.out.println("Programa finalizado.");
+                    
+                    default -> System.out.println("Opción inválida.");
+                }
+                
+            } while (opcion != 4);
+        }
+    }
+}
