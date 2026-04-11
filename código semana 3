@@ -1,0 +1,44 @@
+import java.util.Arrays;
+public class MiniProgama {
+    public static void main(String[] args) {
+        int [] arregloA = {10,20,30,40,50};
+        int [] arregloB = {10,15,15,40,25};
+        System.out.println("-----------Comparar Arreglos");
+        for (int i = 0; i < arregloA.length; i++) {
+            if (arregloA[i] == arregloB[i]) {
+                System.out.printf("indice %d: %d == %d -> IGUALES%n", i, arregloA[i], arregloB[i]);
+            } else {
+                System.out.printf("indice %d: %d != %d -> DIFERENTES%n", i, arregloA[i], arregloB[i]);
+            }
+        }
+        
+        System.out.println();
+        
+        
+        System.out.println("-----------Clonacion de arreglos");
+        int [] clonArray = new int [arregloA.length];
+        for (int i = 0; i < arregloA.length; i++) {
+          clonArray[i] = arregloA[i];       
+        }
+        System.out.println("Arreglo original: " + Arrays.toString(arregloA));
+        System.out.println("Arreglo clon: " + Arrays.toString(clonArray));
+        if (Arrays.equals(arregloA, clonArray)) {
+          System.out.println("La clonacion fue exitosa (mismos valores).");
+        }
+        if (arregloA != clonArray) {
+          System.out.println("Los arreglos son diferentes en memoria (clon valido :D).");
+        }
+        
+        System.out.println();
+        
+        System.out.println("-----------Fusion de arreglos");
+        int [] fusionArray = new int [arregloA.length + arregloB.length];
+        for (int i = 0; i < arregloA.length; i++) {
+            fusionArray[i] = arregloA[i];
+        }
+        for (int i = 0; i < arregloB.length; i++) {
+            fusionArray[i + arregloA.length] = arregloB[i];
+        }
+        System.out.println(Arrays.toString(fusionArray));
+    }
+}
