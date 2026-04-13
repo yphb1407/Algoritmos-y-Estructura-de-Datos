@@ -1,0 +1,7 @@
+Un arreglo unidimensional (vector) es una estructura de datos estática que almacena
+elementos del mismo tipo y se accede a ellos mediante índices.
+Permite organizar, acceder y manipular datos fácilmente dentro de un programa.
+Operaciones principales:
+Comparación: revisar elemento por elemento para saber si dos arreglos son iguales (misma longitud y mismos valores).
+Clonación: crear una copia exacta de un arreglo para trabajar sin modificar el original.
+Fusión: combinar dos o más arreglos en uno solo.
