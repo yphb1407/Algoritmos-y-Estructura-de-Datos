@@ -1,0 +1,29 @@
+Los arreglos bidimensionales son estructuras de datos que
+permiten organizar información en forma de tablas, usando
+filas y columnas. Cada elemento se accede mediante dos
+índices, lo que facilita representar datos más complejos
+que en los arreglos simples.
+
+Una matriz cuadrada es un tipo especial de arreglo
+bidimensional donde el número de filas es igual al número
+de columnas. Este tipo de matrices es muy común en
+problemas matemáticos y computacionales.
+
+Las matrices triangulares se dividen en dos tipos.
+
+La matriz triangular inferior tiene todos los elementos
+por encima de la diagonal principal iguales a cero, mientras
+que la matriz triangular superior tiene todos los elementos
+por debajo de la diagonal principal en cero. Estas matrices
+permiten reducir cálculos innecesarios.
+
+La matriz tridiagonal es una matriz donde solo la diagonal
+principal y las dos diagonales cercanas contienen valores
+distintos de cero. Esto permite optimizar el uso de
+memoria, ya que no es necesario almacenar todos los elementos.
+
+Las matrices simétricas son aquellas en las que los valores
+se repiten respecto a la diagonal principal, es decir, matriz[i][j]
+es igual a matriz[j][i]. Esto simplifica muchos cálculos.
+Por otro lado, las matrices asimétricas no cumplen esta propiedad
+y no presentan ese tipo de simetría.
