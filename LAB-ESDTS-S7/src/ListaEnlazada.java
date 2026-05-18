@@ -1,4 +1,4 @@
-// ===== CLASE LISTA =====
+
 class ListaEnlazada {
 
     private Nodo cabeza;
@@ -6,10 +6,14 @@ class ListaEnlazada {
 
     private final int MAX = 10;
 
-    // ----- INSERTAR INICIO -----
+    // =========================
+    // INSERTAR INICIO
+    // =========================
     public void insertarInicio(int valor) {
 
-        if (tamaño >= MAX) return;
+        if (tamaño >= MAX) {
+            return;
+        }
 
         Nodo nuevo = new Nodo(valor);
 
@@ -20,10 +24,14 @@ class ListaEnlazada {
         tamaño++;
     }
 
-    // ----- INSERTAR FINAL -----
+    // =========================
+    // INSERTAR FINAL
+    // =========================
     public void insertarFinal(int valor) {
 
-        if (tamaño >= MAX) return;
+        if (tamaño >= MAX) {
+            return;
+        }
 
         Nodo nuevo = new Nodo(valor);
 
@@ -45,10 +53,14 @@ class ListaEnlazada {
         tamaño++;
     }
 
-    // ----- INSERTAR MEDIO -----
+    // =========================
+    // INSERTAR MEDIO
+    // =========================
     public void insertarMedio(int ref, int valor) {
 
-        if (tamaño >= MAX) return;
+        if (tamaño >= MAX) {
+            return;
+        }
 
         Nodo aux = cabeza;
 
@@ -56,7 +68,9 @@ class ListaEnlazada {
             aux = aux.siguiente;
         }
 
-        if (aux == null) return;
+        if (aux == null) {
+            return;
+        }
 
         Nodo nuevo = new Nodo(valor);
 
@@ -67,20 +81,28 @@ class ListaEnlazada {
         tamaño++;
     }
 
-    // ----- ELIMINAR INICIO -----
+    // =========================
+    // ELIMINAR INICIO
+    // =========================
     public void eliminarInicio() {
 
-        if (cabeza == null) return;
+        if (cabeza == null) {
+            return;
+        }
 
         cabeza = cabeza.siguiente;
 
         tamaño--;
     }
 
-    // ----- ELIMINAR FINAL -----
+    // =========================
+    // ELIMINAR FINAL
+    // =========================
     public void eliminarFinal() {
 
-        if (cabeza == null) return;
+        if (cabeza == null) {
+            return;
+        }
 
         if (cabeza.siguiente == null) {
 
@@ -100,10 +122,14 @@ class ListaEnlazada {
         tamaño--;
     }
 
-    // ----- ELIMINAR MEDIO -----
+    // =========================
+    // ELIMINAR MEDIO
+    // =========================
     public void eliminarMedio(int valor) {
 
-        if (cabeza == null) return;
+        if (cabeza == null) {
+            return;
+        }
 
         if (cabeza.dato == valor) {
 
@@ -116,39 +142,54 @@ class ListaEnlazada {
 
         Nodo aux = cabeza;
 
-        while (aux.siguiente != null &&
-               aux.siguiente.dato != valor) {
+        while (aux.siguiente != null
+                && aux.siguiente.dato != valor) {
 
             aux = aux.siguiente;
         }
 
         if (aux.siguiente != null) {
 
-            aux.siguiente =
-                    aux.siguiente.siguiente;
+            aux.siguiente
+                    = aux.siguiente.siguiente;
 
             tamaño--;
         }
     }
 
-    // ----- MOSTRAR -----
+    // =========================
+    // MOSTRAR
+    // =========================
     public void mostrar() {
 
-        Nodo aux = cabeza;
+    if (tieneCiclo()) {
 
-        System.out.print("Lista: ");
+        System.out.println(
+                "No se puede mostrar: hay ciclo");
 
-        while (aux != null) {
+        return;
+    }
 
-            System.out.print("[" + aux.dato + "]");
+    Nodo aux = cabeza;
 
-            aux = aux.siguiente;
+    System.out.print("Lista: ");
 
-            if (aux != null) {
-                System.out.print(" -> ");
-            }
+    while (aux != null) {
+
+        System.out.print(
+                "[" + aux.dato + "]");
+
+        aux = aux.siguiente;
+
+        if (aux != null) {
+            System.out.print(" -> ");
         }
+    }
 
-        System.out.println();
+    System.out.println();
+}
+
+    private boolean tieneCiclo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

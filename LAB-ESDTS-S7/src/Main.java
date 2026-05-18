@@ -1,46 +1,48 @@
+
 import java.util.Scanner;
+
 public class Main {
+
     public static void main(String[] args) {
-        ListaEnlazada lista =new ListaEnlazada();
+        ListaEnlazada lista = new ListaEnlazada();
         Scanner sc = new Scanner(System.in);
-        int op = 0;
-        while (op != 7) {
-            System.out.print(
-                "\n1.InsIni 2.InsFin 3.InsMed " +
-                "4.EliIni 5.EliFin 6.EliMed 7.Salir: "
-            );
+        int op;
+        do {
+            System.out.println("""
+                               1.instIn 2.instFin 3.insMid 4.eliIn 5.eliFin 6.eliMedio 7.MostarListaYfin""");
             op = sc.nextInt();
             switch (op) {
-                case 1:
+                case 1 -> {
                     System.out.print("Dato: ");
                     lista.insertarInicio(sc.nextInt());
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.print("Dato: ");
                     lista.insertarFinal(sc.nextInt());
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.print("Despues de: ");
                     int ref = sc.nextInt();
                     System.out.print("Dato: ");
                     int nuevo = sc.nextInt();
                     lista.insertarMedio(ref, nuevo);
-                    break;
-                case 4:
+                }
+                case 4 ->
                     lista.eliminarInicio();
-                    break;
-                case 5:
+                case 5 ->
                     lista.eliminarFinal();
-                    break;
-                case 6:
+                case 6 -> {
                     System.out.print("Dato: ");
                     lista.eliminarMedio(sc.nextInt());
-                    break;
+                }
+                case 7 ->
+                    lista.mostrar();
             }
-            if (op != 7) {
+            if (op != 7
+                    && op != 8) {
                 lista.mostrar();
             }
-        }
+        } while (op != 7);
         sc.close();
     }
 }
