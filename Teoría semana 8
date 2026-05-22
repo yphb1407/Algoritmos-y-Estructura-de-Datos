@@ -1,0 +1,34 @@
+Estructura Central de la Lista Enlazada Simple
+Definición: Es una estructura de datos secuencial compuesta por nodos, donde
+cada elemento se conecta al siguiente mediante una referencia.  
+
+Componentes del Nodo: Cada nodo se compone estrictamente de 
+un Dato (el valor) y una Referencia (puntero al siguiente nodo).  
+
+Diferencia clave: A diferencia de las listas dobles, no tiene referencias al nodo anterior.  
+
+Operaciones Esenciales
+Recorrido y Búsqueda: Ambas operaciones se realizan de forma
+secuencial, avanzando desde la cabeza de la lista hasta encontrar el valor o llegar al final.  
+Inserción y Eliminación: Se pueden ejecutar en posiciones variables: al inicio, al final o en
+una posición específica de la secuencia.  
+
+Técnicas de Optimización Avanzada
+Para maximizar el rendimiento y evitar recorridos innecesarios en sistemas de alto
+rendimiento, se aplican las siguientes estrategias:  
+
+Punteros Múltiples: Utilizados para optimizar búsquedas y para la detección de ciclos mediante 
+el algoritmo de Floyd (punteros rápido y lento). 
+
+Divide y Vencerás: Aplicado en el ordenamiento eficiente de los nodos.  
+
+Reorganización de Enlaces: Empleada para la inversión de la lista en un único recorrido y 
+para la fusión de dos listas previamente ordenadas. 
+
+Complejidad temporal 
+
+Accseso y Operaciones Basicas O(n) recorrido secuencial
+Busqueda 0(n) Recorrido con punteros multiples
+Inversion de lista O(n) Reorganizacion en un solo recorrido
+Deteccion de ciclos (Floyd) O(n) Evalua con un puntero rapido y lento
+Fusien de listas O(n+m) Combina 2 listas diferentes
