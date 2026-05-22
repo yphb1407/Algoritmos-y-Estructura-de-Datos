@@ -1,0 +1,60 @@
+1. Listas Doblemente Enlazadas
+Definición
+Una lista doblemente enlazada es una estructura de datos lineal y dinámica
+caracterizada por su capacidad de navegación bidireccional. A diferencia de las
+estructuras lineales simples, cada nodo del sistema posee una topología de
+tres componentes fundamentales:
+
+Dato (dato): El campo destinado a contener la información o valor almacenado.
+Puntero Siguiente (siguiente): Referencia direccionada hacia el nodo subsecuente.
+Puntero Anterior (anterior): Referencia direccionada hacia el nodo predecesor.
+
+Ventajas Operacionales
+Flexibilidad de Flujo: Permite el recorrido y la evaluación de elementos en ambas
+direcciones de la secuencia.
+Eficiencia en la Desconexión: La operación de eliminación es más eficiente debido 
+a que no se requiere un recorrido secuencial previo para identificar al nodo anterior; el
+nodo a eliminar ya posee la dirección de su predecesor de forma nativa.
+
+2. Listas Circulares
+Definición 
+Una lista circular constituye una estructura con conexión continua, definida por
+la ausencia de un nodo terminal nulo. En este modelo, el último nodo de la secuencia
+redirige su puntero de salida hacia el nodo inicial, configurando un ciclo cerrado sin
+extremos definidos.
+
+Clasificación 
+Lista Circular Simple: Cada nodo cuenta con un único puntero de dirección unívoca
+(siguiente), donde el nodo final se conecta con la cabeza de la lista.Lista 
+Circular Doble: Combina la naturaleza bidireccional de las listas dobles con la
+continuidad cíclica, interconectando los extremos terminal e inicial en ambos sentidos.
+
+Aplicaciones de Alta Eficiencia
+Esta estructura es idónea para procesos que demandan un recorrido continuo e infinito 
+o acceso repetitivo a elementos, destacando en:
+
+Buffers circulares para la gestión de flujos de datos en sistemas embebidos.
+Sistemas de planificación de procesos bajo el algoritmo de asignación de turnos cíclicos (Round-Robin).
+
+3. Operaciones 
+Gestión de Enlaces (Inserción y Eliminación)La manipulación de estas estructuras complejas exige
+una reconfiguración rigurosa de los punteros auxiliares:
+
+En listas doblemente enlazadas, es obligatorio actualizar simétricamente tanto los enlaces 
+siguiente como anterior de los nodos adyacentes para evitar la pérdida de consistencia en 
+la memoria.
+
+En listas circulares, al insertar o suprimir elementos (especialmente en los extremos), se 
+debe garantizar que el nodo de cierre reasigne correctamente su puntero hacia la nueva dirección 
+de inicio.
+
+4. Seguridad y Control de Recursos
+Para garantizar la estabilidad del sistema durantela codificación e implementación de estas
+estructuras avanzadas, se deben cumplir las siguientes pautasde control:
+
+Consistencia Bidireccional: Asegurar la actualización precisa y ordenada de los punteros anterior
+y siguiente en cada operación de modificación estructural para prevenir referencias huérfanas.
+
+Control de Ruptura de Bucles: Implementar condiciones de parada estrictas en los algoritmos de
+recorrido de listas circulares (comparando la posición actual contra el puntero inicial) para 
+evitar ciclos infinitos de ejecución y desbordamientos de recursos.
